@@ -1,0 +1,6 @@
+[submodule "biofast-reference"]
+	path = biofast-reference
+	url = https://github.com/lh3/biofast.git
+[submodule "paraseq_filt"]
+	path = paraseq_filt
+	url = https://github.com/urineri/pyraseq.git

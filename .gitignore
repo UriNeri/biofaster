@@ -1,0 +1,53 @@
+# FASTQ data files
+biofast-data-v1/
+*.fq
+*.fastq
+*.fq.gz
+*.fastq.gz
+
+# Benchmark results
+benchmark_results/
+
+# JRE installation
+jre/
+
+# BBTools installation
+BBTools/
+BBTools-*.tar.gz
+
+# Rust build artifacts
+target/
+Cargo.lock
+
+# Temporary files
+*.fa
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Conda/Mamba environment
+.conda/
+env/
+venv/
+
+# Pixi
+.pixi/
+pixi.lock
+
+# OS files
+.DS_Store
+
+# targz
+*.tar.gz
+
+# bbtools
+ref/
+
+# data
+test-data/*
+
+
+dummy_run_all_benchmarks.sh
