@@ -1,0 +1,20 @@
+[package]
+name = "paraseq_filt"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "paraseq_filt"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "paraseq_filt"
+path = "src/main.rs"
+
+[dependencies]
+paraseq = "0.4"
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1.0"
+flate2 = "1.0"
+num_cpus = "1.16"
+pyo3 = { version = "0.23", features = ["extension-module"] }

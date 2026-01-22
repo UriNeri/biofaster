@@ -1,0 +1,40 @@
+[workspace]
+name = "paraseq_filt"
+version = "0.1.0"
+description = "Fast parallel FASTA/FASTQ filtering using Rust and paraseq"
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64", "osx-64", "osx-arm64"]
+
+[tasks]
+# Build everything (CLI + Python bindings)
+build = { depends-on = ["build-cli", "build-python"] }
+
+# Build the Rust CLI binary
+build-cli = "cargo build --release"
+
+# Build Python bindings in development mode
+build-python = "maturin develop --release"
+
+# Build Python wheel
+build-wheel = "maturin build --release"
+
+# Run Rust tests
+test-rust = "bash tests/test.sh"
+
+# Run Python tests
+test-python = "python tests/test_python.py"
+
+# Run all tests
+test = { depends-on = ["test-rust", "test-python"] }
+
+# Clean build artifacts
+clean = "cargo clean && rm -rf target/wheels"
+
+[dependencies]
+python = ">=3.8,<3.14"
+maturin = ">=1.0,<2.0"
+pip = "*"
+rust = ">=1.70"
+patchelf = ">=0.17.2,<0.19"
+bzip2 = ">=1.0.8,<2"
+htslib = "*"  # Provides bgzip

@@ -1,0 +1,90 @@
+FASTQ Parser Benchmark Summary
+==============================
+Date: Wed Dec 17 01:57:03 PST 2025
+Host: n0008.dori0
+
+Test Configuration:
+  Test sizes benchmarked: 0.1m 1m 20m 50m 70m 100m
+  Warmup runs: 1
+  Benchmark runs: 2
+
+File sizes:
+  0.1m:
+    Raw:      68M
+    Gzipped:  11M
+    Bgzipped: 12M
+  1m:
+    Raw:      674M
+    Gzipped:  106M
+    Bgzipped: 113M
+  20m:
+    Raw:      6.6G
+    Gzipped:  3.1G
+    Bgzipped: 2.2G
+  50m:
+    Raw:      33G
+    Gzipped:  7.6G
+    Bgzipped: 7.9G
+  70m:
+    Raw:      47G
+    Gzipped:  7.3G
+    Bgzipped: 7.7G
+  100m:
+    Raw:      34G
+    Gzipped:  16G
+    Bgzipped: 16G
+
+Benchmarks performed per size:
+  - Hot (raw FASTQ)
+  - Hot (gzipped FASTQ)
+  - Hot (bgzipped FASTQ)
+  - Cold (raw FASTQ)
+  - Cold (gzipped FASTQ)
+  - Cold (bgzipped FASTQ)
+
+Result directories:
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/0.1m
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/0.1m/cold_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/0.1m/cold_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/0.1m/cold_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/0.1m/hot_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/0.1m/hot_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/0.1m/hot_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/100m
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/100m/cold_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/100m/cold_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/100m/cold_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/100m/hot_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/100m/hot_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/100m/hot_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/1m
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/1m/cold_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/1m/cold_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/1m/cold_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/1m/hot_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/1m/hot_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/1m/hot_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/20m
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/20m/cold_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/20m/cold_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/20m/cold_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/20m/hot_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/20m/hot_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/20m/hot_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/50m
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/50m/cold_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/50m/cold_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/50m/cold_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/50m/hot_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/50m/hot_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/50m/hot_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/70m
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/70m/cold_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/70m/cold_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/70m/cold_raw_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/70m/hot_bgz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/70m/hot_gz_outputs
+  /clusterfs/jgi/scratch/science/metagen/neri/code/blits/biofaster/benchmark_results/benchmark_20251215_115019/70m/hot_raw_outputs
+
+Total result files: 704

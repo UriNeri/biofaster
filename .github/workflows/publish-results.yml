@@ -1,0 +1,61 @@
+name: Publish Benchmark Results
+
+on:
+  workflow_dispatch:  # Manual trigger
+  push:
+    paths:
+      - 'plots/**'
+      - 'benchmark_results/**'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Create docs directory and copy files
+        run: |
+          mkdir -p docs
+          
+          # Copy plot HTML files (charts and index)
+          if [ -d "plots" ]; then
+            cp plots/*.html docs/ 2>/dev/null || true
+          fi
+          
+          # Copy latest benchmark summary files
+          latest_dir=$(ls -td benchmark_results/benchmark_* 2>/dev/null | head -1)
+          if [ -n "$latest_dir" ]; then
+            cp "$latest_dir"/*.md docs/ 2>/dev/null || true
+            cp "$latest_dir"/*.csv docs/ 2>/dev/null || true
+            cp "$latest_dir"/SUMMARY.txt docs/ 2>/dev/null || true
+            cp "$latest_dir"/system_info.json docs/ 2>/dev/null || true
+          fi
+          
+          # List files for verification
+          echo "Files in docs directory:"
+          ls -lh docs/
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

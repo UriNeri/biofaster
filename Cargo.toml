@@ -1,0 +1,11 @@
+[package]
+name = "fqcnt"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+needletail = "0.6"
+
+[[bin]]
+name = "fqcnt_nt"
+path = "src/fqcnt_nt.rs"
