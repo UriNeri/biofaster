@@ -3,7 +3,7 @@
 benchmarking suite comparing FASTQ parsers/streamers using [hyperfine](https://github.com/sharkdp/hyperfine), measuring "hot", "cold", and "really-cold"* performance on both raw, gzipped, and bgzipped files.
 
 Inspired by [biofast](https://github.com/lh3/biofast) - a reference of it is included as a git submodule in `biofast-reference/` (so it might be easier to benchmark the other entries from biofast in future).
-
+# WARNING! THIS IS PARTIALLY VIBE CODED AND NEEDS SOME WORK TO BE REALLY MEANINGFULL
 
 ## Setup
 `pixi` manages dependencies and the Python environment,  and pixi tasks are used to execute the setup/compile/generate data/benchmark. Below are the pixi tasks as they are in the pyproject.toml:
